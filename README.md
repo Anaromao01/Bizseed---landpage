@@ -61,7 +61,5 @@ Contributions are welcome! To contribute:
 
 Developed by [Ana Claudia Romão](https://github.com/Anaromao01).
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
