@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - BizSeed</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">BizSeed</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li>
+                    <select id="language-selector">
+                        <option value="pt-BR" selected>Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulário de Cadastro -->
+    <section class="register-section">
+        <div class="container">
+            <div class="register-box">
+                <h1>Crie sua conta</h1>
+                <p>Preencha os campos abaixo para se cadastrar na BizSeed.</p>
+                <form action="#" method="POST" class="register-form">
+                    <!-- Nome Completo -->
+                    <div class="form-group">
+                        <label for="name">Nome Completo:</label>
+                        <input type="text" id="name" name="name" placeholder="Ex.: Ana Claudia Romão" required aria-label="Nome Completo">
+                    </div>
+    
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Ex.: seuemail@exemplo.com" required aria-label="Email">
+                        <small class="form-hint">Usaremos seu email para login e comunicação.</small>
+                    </div>
+    
+                    <!-- Senha -->
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" pattern="(?=.*[A-Z]) {8,16}" placeholder="Mínimo 8 caracteres" required aria-label="Senha">
+                            <button type="button" class="show-password" aria-label="Mostrar senha">👁</button>
+                        </div>
+                    </div>
+    
+                    <!-- Confirmar Senha -->
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Senha:</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Repita sua senha" required aria-label="Confirmar Senha">
+                            <button type="button" class="show-password" aria-label="Mostrar senha">👁</button>
+                        </div>
+                    </div>
+    
+                    <!-- Termos e Condições -->
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" name="terms" required aria-label="Aceitar os Termos">
+                        <label for="terms">Eu aceito os <a href="terms.html">Termos e Condições</a></label>
+                    </div>
+    
+                    <!-- Botão de Cadastro -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+    
+                    <!-- Link para Login -->
+                    <div class="form-footer">
+                        <p>Já tem uma conta? <a href="login.html">Faça Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="rodape">
+        <p>&copy; 2025 BizSeed. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

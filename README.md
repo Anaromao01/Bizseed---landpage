@@ -60,6 +60,3 @@ Contributions are welcome! To contribute:
 ## Author
 
 Developed by [Ana Claudia Romão](https://github.com/Anaromao01).
-
-
-

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BizSeed</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">BizSeed</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="./login.html" class="active">Login</a></li>
+                <li>
+                    <select id="language-selector">
+                        <option value="pt-BR" selected>Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Formulário de Login -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-box">
+                <h1>Login</h1>
+                <form action="#" method="POST" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+                    <div class="form-footer">
+                        <p>Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2025 BizSeed. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
