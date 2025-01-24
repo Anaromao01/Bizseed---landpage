@@ -34,16 +34,56 @@ const translations = {
 
 // Function to update text based on selected language
 function updateText(language) {
-    document.querySelector('.hero h1').textContent = translations[language]['hero-title'];
-    document.querySelector('.hero p').textContent = translations[language]['hero-description'];
-    document.querySelector('.register-box h1').textContent = translations[language]['register-title'];
-    document.querySelector('.register-box p').textContent = translations[language]['register-description'];
-    document.querySelector('.login-box h1').textContent = translations[language]['login-title'];
-    document.querySelector('label[for="email"]').textContent = translations[language]['login-email'];
-    document.querySelector('label[for="password"]').textContent = translations[language]['login-password'];
-    document.querySelector('.login-form button').textContent = translations[language]['login-button'];
-    document.querySelector('.register-form button').textContent = translations[language]['register-button'];
-    document.querySelector('label[for="terms"]').textContent = translations[language]['terms-accept'];
+    const heroTitle = document.querySelector('.hero h1');
+    if (heroTitle) {
+        heroTitle.textContent = translations[language]['hero-title'];
+    }
+    
+    const heroDescription = document.querySelector('.hero p');
+    if (heroDescription) {
+        heroDescription.textContent = translations[language]['hero-description'];
+    }
+    
+    const registerTitle = document.querySelector('.register-box h1');
+    if (registerTitle) {
+        registerTitle.textContent = translations[language]['register-title'];
+    }
+    
+    const registerDescription = document.querySelector('.register-box p');
+    if (registerDescription) {
+        registerDescription.textContent = translations[language]['register-description'];
+    }
+    
+    const loginTitle = document.querySelector('.login-box h1');
+    if (loginTitle) {
+        loginTitle.textContent = translations[language]['login-title'];
+    }
+    
+    const emailLabel = document.querySelector('label[for="email"]');
+    if (emailLabel) {
+        emailLabel.textContent = translations[language]['login-email'];
+    }
+    
+    const passwordLabel = document.querySelector('label[for="password"]');
+    if (passwordLabel) {
+        passwordLabel.textContent = translations[language]['login-password'];
+    }
+    
+    const loginButton = document.querySelector('.login-form button');
+    if (loginButton) {
+        loginButton.textContent = translations[language]['login-button'];
+    }
+    
+    const registerButton = document.querySelector('.register-form button');
+    if (registerButton) {
+        registerButton.textContent = translations[language]['register-button'];
+    }
+    
+    const termsLabel = document.querySelector('label[for="terms"]');
+    if (termsLabel) {
+        termsLabel.textContent = translations[language]['terms-accept'];
+    }
+
 }
 
 // Event listener for language selection
@@ -54,3 +94,20 @@ languageSelector.addEventListener('change', (event) => {
 
 // Initial text update
 updateText('pt-BR'); // Default language
+
+var x = document.getElementById("login-form-password");   // Input
+var s = document.getElementById("Layer_1");               // Show pass
+var h = document.getElementById("Layer_2");               // Hide pass
+
+function togglePass() {
+    console.log("Toggle password function called"); // Debugging statement
+    if (x.type === "password") {
+        x.type = 'text';
+        s.style.display = 'none';
+        h.style.display = 'inline';
+    } else {
+        x.type = 'password';
+        s.style.display = 'inline';
+        h.style.display = 'none';
+    }   
+}
