@@ -15,7 +15,6 @@ const translations = {
         'login-button': 'Entrar',
         'register-button': 'Cadastrar',
         'terms-accept': 'Eu aceito os Termos e Condições',
-        // Add more translations as needed
     },
     'en': {
         'hero-title': 'Turn your ideas into reality',
@@ -28,7 +27,6 @@ const translations = {
         'login-button': 'Log In',
         'register-button': 'Register',
         'terms-accept': 'I accept the Terms and Conditions',
-        // Add more translations as needed
     }
 };
 
@@ -83,7 +81,6 @@ function updateText(language) {
     if (termsLabel) {
         termsLabel.textContent = translations[language]['terms-accept'];
     }
-
 }
 
 // Event listener for language selection
@@ -95,19 +92,17 @@ languageSelector.addEventListener('change', (event) => {
 // Initial text update
 updateText('pt-BR'); // Default language
 
-var x = document.getElementById("login-form-password");   // Input
-var s = document.getElementById("Layer_1");               // Show pass
-var h = document.getElementById("Layer_2");               // Hide pass
-
 function togglePass() {
-    console.log("Toggle password function called"); // Debugging statement
+    var x = document.getElementById("login-form-password");
+    var showIcon = document.getElementById("show-icon");
+    var hideIcon = document.getElementById("hide-icon");
     if (x.type === "password") {
-        x.type = 'text';
-        s.style.display = 'none';
-        h.style.display = 'inline';
+        x.type = "text";
+        showIcon.style.display = "none";
+        hideIcon.style.display = "block";
     } else {
-        x.type = 'password';
-        s.style.display = 'inline';
-        h.style.display = 'none';
-    }   
+        x.type = "password";
+        showIcon.style.display = "block";
+        hideIcon.style.display = "none";
+    }
 }
