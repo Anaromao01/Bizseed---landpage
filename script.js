@@ -106,3 +106,20 @@ function togglePass() {
         hideIcon.style.display = "none";
     }
 }
+
+//register 
+function togglePass(inputId, showIconId, hideIconId) {
+    const input = document.getElementById(inputId);
+    const showIcon = document.getElementById(showIconId);
+    const hideIcon = document.getElementById(hideIconId);
+
+    if (input.type === "password") {
+        input.type = "text";
+        showIcon.style.display = "none";
+        hideIcon.style.display = "inline";
+    } else {
+        input.type = "password";
+        showIcon.style.display = "inline";
+        hideIcon.style.display = "none";
+    }
+}

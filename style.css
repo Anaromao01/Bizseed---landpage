@@ -9,7 +9,6 @@ body {
     font-family: Poppins, Arial, sans-serif;
     line-height: 1.6;
 }
-
 /* Barra de Navegação */
 .navbar {
     background-color: rgba(2, 65, 246, 0.85); /* Azul com transparência */
@@ -596,18 +595,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
     background-color: #f9f9fc;
+    padding: 30%;
+    
 }
 
 .register-box {
     background: #fff;
-    padding: 2.5rem;
+    padding: 2.9rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     max-width: 450px;
-    width: 100%;
+    width: 90%;
 }
 
 .register-box h1 {
@@ -634,11 +636,13 @@ body {
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
 
 .register-form input:focus {
     border-color: #007BFF;
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
 .btn-primary {
@@ -650,6 +654,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .btn-primary:hover {
@@ -670,12 +675,12 @@ body {
     text-decoration: underline;
 }
 
-/* Feedback Visual */
-input:valid {
+/* Feedback Visual Melhorado */
+input:not(:placeholder-shown):valid {
     border-color: #28a745;
 }
 
-input:invalid {
+input:not(:placeholder-shown):invalid {
     border-color: #dc3545;
 }
 
@@ -684,10 +689,12 @@ input:invalid {
     position: relative;
     display: flex;
     align-items: center;
+    
 }
 
 .password-wrapper input {
     flex: 1;
+    padding-right: 40px;
 }
 
 .password-wrapper .show-password {
@@ -696,10 +703,25 @@ input:invalid {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    color: #555;
-    padding: 0;
+    font-size: 1.2rem;
+    color: #777;
+    padding: 5px;
+    transition: color 0.3s ease;
 }
+
+.password-wrapper .show-password:hover {
+    color: #333;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .register-box {
+        padding: 2rem;
+    }
+}
+
 
 /* Form Hint */
 .form-hint {
@@ -707,3 +729,21 @@ input:invalid {
     color: #6c757d;
     margin-top: 0.5rem;
 }
+
+/* Centralizar a seção de registro */
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optional: Full viewport height */
+}
+
+.register-box {
+    max-width: 400px; /* Optional: Limit width */
+    width: 100%; /* Responsive */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    background-color: #fff; /* Optional: Background color */
+}
+
+/*term and conditions*/
